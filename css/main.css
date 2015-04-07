@@ -1,0 +1,447 @@
+@charset "utf-8";
+/* ==========================================================================
+Starter CSS
+========================================================================== */
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 1em;
+}
+
+::selection {
+  background: #BBB; /* WebKit/Blink Browsers */
+  color: #222;
+}
+::-moz-selection {
+  background: #BBB; /* Gecko Browsers */
+  color: #222;
+}
+
+body {
+  min-height: 100%;
+  font-family: Georgia, serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  color: #333;
+  background-color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); /* smooths type in all browsers */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+article, aside, figcaption,figure,
+footer, header, nav, section { display: block; }
+
+img {
+  border: 0;
+  display: block;
+}
+
+a {
+  text-shadow: 2px 2px -1px #111;
+  color: #fff;
+  text-decoration: none;
+  background-image:
+  linear-gradient(to top,
+    rgba(225,225,225,0) 0%,
+    rgba(225,225,225,.5) 0%,
+    rgba(225,225,225,.5) 6%,
+    rgba(225,225,225,0) 8%
+    );
+}
+
+/* add high visibility focus indicators */
+a:hover, a:focus {
+  color: #666;
+
+  background-image:
+  linear-gradient(to top,
+    rgba(102,102,102,0) 0%,
+    rgba(102,102,102,.5) 0%,
+    rgba(102,102,102,.5) 6%,
+    rgba(102,102,102,0) 8%
+    );
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: .95;
+  font-weight: 700;
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.1rem;
+}
+
+h4, h5, h6 {
+  letter-spacing: -0.02rem;
+}
+
+h1 { font-size: 3.815rem; }
+h2 { font-size: 3.185rem; }
+h3 { font-size: 3.052rem; }
+h4 { font-size: 2.441rem; }
+h5 { font-size: 1.563rem; }
+h6 { font-size: 1.25rem; }
+
+ul, ol {
+  margin: 1rem 0;
+  padding-left: 2.5rem;
+}
+p, figure { margin: 1rem 0; }
+
+a img { border: none; }
+
+sup, sub { line-height: 0; }
+
+.header, .main, .footer {
+  width: 100%;
+}
+
+
+/* ==========================================================================
+ Max-Width 700 Pixel Container
+ ========================================================================== */
+ .container {
+  width: 100%;
+  max-width: 43.75rem;
+  padding: 5rem 2rem 4rem 2rem;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+ Images within containers
+ ========================================================================== */
+ .image_container {
+  margin-bottom: 1rem;
+ }
+
+ .image_container img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+ }
+
+ .iframe_container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.iframe_container iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ==========================================================================
+ Content Section styling
+ ========================================================================== */
+ .section {
+  position: relative;
+  width: 100%;
+}
+
+.triangle {
+  position: absolute;
+  bottom: -1.97rem;
+  width: 100%;
+  height: 2rem;
+  z-index: 1;
+}
+
+.triangle path {
+  fill: #fff;
+}
+
+/* ==========================================================================
+ Intro Section
+ ========================================================================== */
+ .intro {
+  background-color: #EF4E45;
+  color: #7A0000;
+  background: url('../images/bg.png') #EF4E45;
+}
+
+.intro .container {
+  animation: fadeUp 1.5s linear 1;
+  -webkit-animation: fadeUp 1.5s linear 1;
+  -ms-animation: fadeUp 1.5s linear 1;
+  -moz-animation: fadeUp 1.5s linear 1;
+  -o-animation: fadeUp 1.5s linear 1;
+}
+
+.intro a {
+  text-shadow: 2px 2px -1px #EF4E45;
+
+  color: #333;
+  background-image:
+  linear-gradient(to top,
+    rgba(51,51,51,0) 0%,
+    rgba(51,51,51,.5) 0%,
+    rgba(51,51,51,.5) 6%,
+    rgba(51,51,51,0) 8%
+    );
+}
+
+.intro a:hover,
+.intro a:focus {
+  color: #000;
+  background-image:
+  linear-gradient(to top,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,.5) 0%,
+    rgba(0,0,0,.5) 6%,
+    rgba(0,0,0,0) 8%
+    );
+}
+
+.intro .container {
+  padding-top: 2rem;
+}
+
+.intro .triangle path {
+  fill: #EF4E45;
+}
+
+.social {
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.social .icon {
+  display: inline-block;
+  margin-right: 1.25rem;
+  height: 2.75rem;
+  width: 2.75rem;
+  border-radius: 100%;
+  border: 2px solid #fff;
+}
+
+.social .icon,
+.social .icon:hover,
+.social .icon:focus {
+  background: none;
+}
+
+.social .icon:last-of-type {
+  margin: 0;
+}
+
+.social .icon .svg {
+  max-width: 50%;
+  display: block;
+  margin: 25% auto;
+}
+
+.social .icon .linkedin { max-width: 45%; }
+.social .icon .pinterest { margin: 27.5% auto; }
+
+@-webkit-keyframes fadeUp {
+  0% { -webkit-transform: translateY(15px); opacity: 0; }
+  50% { -webkit-transform: translateY(15px); opacity: 0; }
+  100% { -webkit-transform: translateY(0px); opacity: 1; }
+}
+
+@-moz-keyframes fadeUp {
+  0% { transform: translateY(15px); opacity: 0; }
+  50% { transform: translateY(15px); opacity: 0; }
+  100% { transform: translateY(0px); opacity: 1; }
+}
+
+@keyframes fadeUp {
+  0% { transform: translateY(15px); opacity: 0; }
+  50% { transform: translateY(15px); opacity: 0; }
+  100% { transform: translateY(0px); opacity: 1; }
+}
+
+/* ==========================================================================
+ Writing Section
+ ========================================================================== */
+ .writing {
+  background-color: #333;
+  color: #E6E6E6;
+}
+
+.writing ul {
+  margin-top: 3rem;
+}
+
+.writing ul li {
+  margin: 1.25rem 0;
+  list-style-type: square;
+}
+
+.writing a {
+  text-shadow: 0px 2px 0px #333;
+}
+
+.writing a:hover,
+.writing a:focus {
+    color: #EF4E45;
+    background-image:
+    linear-gradient(to top,
+      rgba(239, 78, 69,0) 0%,
+      rgba(239, 78, 69,.5) 0%,
+      rgba(239, 78, 69,.5) 6%,
+      rgba(239, 78, 69,0) 8%
+      );
+  }
+
+.writing .triangle path {
+  fill: #333;
+}
+
+/* ==========================================================================
+ Resources Section
+ ========================================================================== */
+ .resources {
+  background-color: #41BBE5;
+  color: #023160;
+  background: url('../images/bg.png') #41BBE5;
+}
+
+.resources ul {
+  width: 100%;
+  float: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resources ul li {
+  float: left;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.resources h5 {
+  margin-bottom: 1rem;
+}
+
+.treehouse {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+.resources .triangle path {
+  fill: #41BBE5;
+}
+
+/* ==========================================================================
+ Footer
+ ========================================================================== */
+ .footer {
+  background-color: #111;
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  font-size: .875rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+
+/*///////////////////////.............../// Begin Responsive Media Queries */
+
+/* ==========================================================================
+ Minimum Device Width of 40 rem (640 pixels)
+ ========================================================================== */
+ @media all and (min-width: 40rem) {
+
+    .intro .container {
+      padding: 4rem 2rem 3rem 2rem;
+    }
+
+    .resources ul li {
+      width: 50%;
+      padding-right: 1rem;
+    }
+
+    .resources ul li a,
+    .treehouse {
+      border: 0px solid #fff;
+      height: 100%;
+      width: 100%;
+      display: block;
+
+      -webkit-transition: all .125s ease;
+        -moz-transition: all .125s ease;
+        -o-transition: all .125s ease;
+    }
+
+    .resources ul li a:hover,
+    .resources ul li a:focus,
+    .treehouse:hover,
+    a:focus .treehouse {
+      opacity: .65;
+    }
+
+ }
+
+/* ==========================================================================
+ Minimum Device Width of 47.5 rem (760 pixels)
+ ========================================================================== */
+ @media all and (min-width: 47.5rem) {
+
+   .container {
+    padding: 7rem 2rem 5rem 2rem;
+  }
+
+  .social .icon {
+    transition: all .15s ease;
+    -webkit-transition: all .15s ease;
+    -moz-transition: all .15s ease;
+    -o-transition: all .15s ease;
+  }
+
+  .social .tw:hover,
+  .social .tw:focus {
+    background-color: #55acee;
+    border-color: #55acee; }
+  
+  .social .db:hover,
+  .social .db:focus {
+    background-color: #ea4c89;
+    border-color: #ea4c89; }
+  
+  .social .ln:hover,
+  .social .ln:focus {
+    background-color: #0976b4;
+    border-color: #0976b4; }
+  
+  .social .pn:hover,
+  .social .pn:focus {
+    background-color: #cc2127;
+    border-color: #cc2127; 
+  }
+
+  .resources ul {
+    margin-bottom: 1rem;
+  }
+
+  .treehouse {
+    width: 48%;
+  }
+
+
+}
+
+/* ==========================================================================
+ Minimum Device Width of 75 rem (1200 pixels)
+ ========================================================================== */
+ @media all and (min-width: 75rem) {
+
+ }
