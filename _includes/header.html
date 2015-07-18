@@ -1,0 +1,15 @@
+<header>
+	<div class="container">
+		<a class="site_title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+		<nav>
+			<ul class="nav_menu">
+				{% for page in site.pages %}
+				{% if page.title %}
+				<li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+				{% endif %}
+				{% endfor %}
+				<li><a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">RSS</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>

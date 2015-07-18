@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">A Tinkerer of Web Things</h1>
+  <p>Ryan Young is a web designer and front-end developer in Des Moines, Iowa. He currently works as a project lead for <a href="http://www.visionary.com" title="Visionary Services, Web Design and Development in Des Moines, Iowa" target="_blank">Visionary Services</a>, a web design and development firm in downtown Des Moines’ historic East Village neighborhood.</p>
+
+  <h4>Latest Blog Posts</h4>
+  {% for post in site.posts limit:3 %}
+    <a href="{{ post.url | prepend: site.baseurl }}" class="article">
+      <h3>{{ post.title }}</h3>
+      <p class="summary">{{ post.description }}</p>
+    </a>
+  {% endfor %}
+  
+</div>

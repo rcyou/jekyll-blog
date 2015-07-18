@@ -1,0 +1,44 @@
+<footer>
+	<div class="container">
+		<div class="social">
+			{% if site.twitter %}
+			<a href="https://twitter.com/{{ site.twitter }}" class="icon twitter" target="_blank">
+				<img class="svg" src="{{ "/images/twitter.svg" | prepend: site.baseurl }}">
+			</a>
+			{% endif %}
+
+			{% if site.github %}
+			<a href="https://github.com/{{ site.github }}" class="icon github" target="_blank">
+				<img class="svg" src="{{ "/images/github.svg" | prepend: site.baseurl }}">
+			</a>
+			{% endif %}
+
+			{% if site.codepen %}
+			<a href="https://codepen.com/{{ site.codepen }}" class="icon codepen" target="_blank">
+				<img class="svg" src="{{ "/images/codepen.svg" | prepend: site.baseurl }}">
+			</a>
+			{% endif %}
+			
+			{% if site.dribbble %}
+			<a href="https://dribbble.com/{{ site.dribbble }}" class="icon dribbble" target="_blank">
+				<img class="svg" src="{{ "/images/dribbble.svg" | prepend: site.baseurl }}">
+			</a>
+			{% endif %}
+
+			{% if site.pinterest %}
+			<a href="https://pinterest.com/{{ site.pinterest }}" class="icon pinterest" target="_blank">
+				<img class="svg" src="{{ "/images/pinterest.svg" | prepend: site.baseurl }}">
+			</a>
+			{% endif %}
+
+			{% if site.linkedin %}
+			<a href="https://linkedin.com/in/{{ site.linkedin }}" class="icon linkedin" target="_blank">
+				<img class="svg" src="{{ "/images/linkedin.svg" | prepend: site.baseurl }}">
+			</a>
+			{% endif %}
+		</div>
+		<div class="copyright">
+			Copyright &copy; {{ site.time | date: '%Y' }} | built with Jekyll and coded with love by {{ site.author }}.
+		</div>
+	</div>
+</footer>

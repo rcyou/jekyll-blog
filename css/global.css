@@ -1,0 +1,441 @@
+@charset "utf-8";
+/* ==========================================================================
+Global CSS
+========================================================================== */
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	min-height: 100%;
+	font-size: 1em;
+}
+body {
+	min-height: 100%;
+	font-size: 1.125rem; /* base body font is 20px */
+	font-family: Georgia, serif;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #373F51;
+	background-color: #F9F9F9;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); /* smooths type in all browsers */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+}
+
+img {
+	border: 0;
+	display: block;
+}
+a {
+	color: #008DDA;
+	text-decoration: none;
+
+	transition: color .15s linear, border-color .15s linear;
+	-webkit-transition: color .15s linear, border-color .15s linear;
+	-moz-transition: color .15s linear, border-color .15s linear;
+	-o-transition: color .15s linear, border-color .15s linear;
+}
+
+/* add high visibility focus indicators */
+a:hover, a:focus {
+	color: #373F51;
+	border-bottom-color: #373F51;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: .5rem 0;
+	padding: 0;
+	text-align: left;
+}
+
+h1 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
+	line-height: 1.125;
+	margin: .75rem 0;
+}
+
+h2 {
+	font-size: 1.5rem;
+	font-style: italic;
+	line-height: 1.25;
+	color: #A7A296;
+}
+
+h3 {
+	font-size: 2.25rem;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
+	line-height: 1.125;
+	margin: 1rem 0 0 0;
+	color: #373F51;
+}
+
+/* add h4, h5, h6 */
+h4 {
+	font-size: 1.75rem;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	line-height: 1.125;
+}
+
+.home h4 {
+	margin: 4rem 0 -1rem 0;
+	color: #A7A296;
+	position: relative;
+}
+
+h5 {
+	font-size: 1.25rem;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
+	color: #4F5362;
+	text-transform: uppercase;
+}
+
+h6 {
+	font-size: 1.125rem;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+}
+
+sup, sub {
+	font-size: 70%;
+	font-weight: bold;
+}
+sup {
+	vertical-align: super;
+}
+sub {
+	vertical-align: sub;
+}
+
+strong, b {
+	font-weight: bold;
+	font-weight: 800;
+}
+
+b {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.05rem;
+}
+
+em, i {
+	font-style: italic;
+}
+
+del, s { color: #A7A296; }
+
+ul { list-style-type: square; }
+
+pre {
+	font-family: monospace;
+	color: #008DDA;
+	font-size: 1.125rem;
+	margin: 1rem 0 2rem 0;
+	padding: .25rem 1.25rem;
+	line-height: 1.25rem;
+	border-left: 1px solid #008DDA;
+	white-space: pre-wrap;
+}
+
+blockquote {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 2rem;
+	line-height: 1.25;
+	margin: 1rem 0;
+	padding: 1rem 0 0 0;
+	position: relative;
+	color: #4F5362;
+}
+
+blockquote:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: .375rem;
+	width: 8rem;
+	background-color: #008DDA;
+}
+
+blockquote p,
+main blockquote p { margin: 0; }
+
+hr {
+	width: 100%;
+	height: 1px;
+	border: 0;
+	background-color: #ccc;
+}
+
+::-moz-selection { 
+	background-color: #008DDA; 
+	color: #EFEFEF;
+}
+
+::selection {
+	background-color: #008DDA;
+	color: #EFEFEF;
+}
+
+/* ==========================================================================
+Page & Containers
+========================================================================== */
+.page, header, main, footer {
+	float: left;
+	max-width: 100%;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	text-align: center;
+}
+
+.container {
+	width: 100%;
+	max-width: 50rem; /* 800px */
+	margin: 0 auto;
+	padding: 0 1rem;
+	display: inline-block;
+	position: relative;
+	text-align: left;
+}
+
+/* ==========================================================================
+Header (contains navigation, logo, etc)
+========================================================================== */
+header {
+	width: 100%;
+	position: relative;
+	overflow: visible;
+	font-family: 'Open Sans', sans-serif;
+
+	position: fixed;
+	background-color: #fff;
+	z-index: 1;
+	box-shadow: 0px 0px 10px -5px rgba(0,0,0,.25);
+}
+
+header .container {
+	margin-top: .5rem;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+}
+
+header a { font-weight: 800; }
+
+header .logo {
+	display: inline-block;
+	width: 200px;
+	margin: 0 auto;
+}
+header .logo img {
+	width: 100%;
+	max-width: 100%; /* logo never wider than container */
+	max-height: 100%; /* logo never taller than container */
+	display: block; /* removes HTML whitespace between img and container */
+}
+
+header .site_title {
+	float: left;
+	color: #A7A296;
+	text-align: center;
+	line-height: 1.25;
+	margin: 0;
+	display: inline-block;
+	font-size: 1.75rem;
+	overflow: hidden;
+	text-decoration: none;
+	font-family: Georgia, sans-serif;
+	font-weight: normal;
+}
+
+header .site_title:hover,
+header .site_title:focus {
+	color: #008DDA;
+}
+
+header nav {
+	float: right;
+	display: inline-block;
+}
+
+nav .nav_menu {
+	position: relative;
+	padding: 0;
+	margin: .25rem 0;
+	list-style: none;
+	font-size: 0; /* trick to remove HTML whitespace between li elements */
+	display: block;
+	text-align: center;
+}
+nav .nav_menu li {
+	position: relative;
+	display: inline-block;
+}
+nav .nav_menu li a {
+	display: inline-block;
+	padding: 0;
+	margin: 0 1.5rem;
+	font-size: 1rem;
+	text-decoration: none;
+	color: #008DDA;
+	text-align: center;
+}
+
+nav .nav_menu li:first-child a { margin-left: 0; }
+nav .nav_menu li:last-child a { margin-right: 0; }
+
+/* nav .nav_menu li.nav_menu_active a ///* remove */
+nav .nav_menu li a:hover, nav .nav_menu li a:focus {
+	color: #bdc3c7;
+}
+
+/* ==========================================================================
+Body / Contents
+========================================================================== */
+main { padding-top: 6rem; }
+
+main p {
+	margin: .5rem 0;
+	display: inline-block;
+}
+
+main a { border-bottom: 1px dotted #008DDA; }
+
+main ol, main ul {
+	list-style-position: outside;
+	padding-left: 4rem;
+	margin: 1rem 0 2rem 0;
+}
+
+main ol li,
+main ul li { padding: .25rem 0; }
+
+/* ==========================================================================
+Blog / Article CSS
+========================================================================== */
+.article {
+	display: block;
+	border-bottom: 1px solid #A7A296;
+	font-weight: inherit;
+	margin: 2rem 0 2.5rem 0;
+	color: inherit;
+}
+
+.article:first-of-type { margin-top: 3rem; }
+
+.article h3 {
+	transition: all .15s linear;
+	-webkit-transition: all .15s linear;
+	-moz-transition: all .15s linear;
+	-o-transition: all .15s linear;
+}
+
+.article:hover h3,
+.article:focus h3 {
+	color: #008DDA;
+}
+
+.article .summary {
+	display: block;
+	margin: 1rem 0 2.5rem 0;
+}
+
+.article:last-of-type {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+
+.post_content > p:first-of-type { margin-top: 2rem; }
+
+.post_header { text-align: left; }
+
+.post_meta {
+	color: #A7A296;
+	text-align: left;
+}
+
+/* ==========================================================================
+Footer (Lower navigation, copyright, etc)
+========================================================================== */
+footer {
+	width: 100%;
+	position: relative;
+	overflow: visible;
+	font-size: .875rem;
+	text-align: center;
+	margin-top: 2rem;
+	padding: 0 1rem;
+}
+
+footer .container {
+	padding-top: 3rem;
+	padding-bottom: 2rem;
+	border-top: 1px solid #A7A296;
+	text-align: center;
+}
+
+.social {
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+.social .icon {
+	display: inline-block;
+	height: 2.25rem;
+	width: 2.25rem;
+	background-color: #A7A296;
+	margin: .25rem;
+	text-decoration: none;
+	border-top-left-radius: .75rem;
+	border-bottom-right-radius: .75rem;
+	transition: background-color .15s linear;
+	-webkit-transition: background-color .15s linear;
+	-moz-transition: background-color .15s linear;
+	-o-transition: background-color .15s linear;
+}
+
+.icon img {
+	display: block;
+	width: 1rem;
+	margin: .625rem auto 0 auto;
+}
+
+.social .icon:hover,
+.social .icon:focus {
+	background-color: #A7A296;
+}
+
+.icon.twitter { background-color: #55acee; }
+.icon.dribbble { background-color: #ea4c89;}
+.icon.github { background-color: #333; }
+.icon.linkedin { background-color: #007bb6; }
+.icon.pinterest { background-color: #cb2027; }
+.icon.codepen { background-color: #000; }
+
+/* ==========================================================================
+Desktop View (more than 50rem/800px)
+========================================================================== */
+@media all and (min-width:50rem) {
+	footer { padding: 0; }
+
+	footer .container {
+		margin: 0 auto;
+		max-width: 48rem;
+	}
+}
