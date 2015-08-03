@@ -311,6 +311,8 @@ header nav {
 .show_menu .menu_icon { color: #008DDA; }
 
 .show_menu .menu_icon:before {
+	-webkit-transform: rotate(135deg);
+	-ms-transform: rotate(135deg);
 	transform: rotate(135deg);
 }
 
