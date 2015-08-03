@@ -305,10 +305,10 @@ header nav {
 	line-height: 0.5;
 	height: 1.2rem;
 
-	transition: all .5s linear;
-	-webkit-transition: all .5s linear;
-	-moz-transition: all .5s linear;
-	-o-transition: all .5s linear;
+	transition: transform .5s linear, -webkit-transform .5s linear;
+	-webkit-transition: transform .5s linear, -webkit-transform .5s linear;
+	-moz-transition: transform .5s linear, -webkit-transform .5s linear;
+	-o-transition: transform .5s linear, -webkit-transform .5s linear;
 }
 
 .show_menu .menu_icon { color: #008DDA; }
