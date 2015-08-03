@@ -510,11 +510,13 @@ Desktop View (more than 50rem/800px)
 	}
 	nav .nav_menu li {
 		display: inline-block;
+		width: auto;
 	}
 	nav .nav_menu li a {
 		display: inline-block;
 		padding: 0;
 		margin: 0 1.5rem;
+		width: auto;
 		font-size: 1rem;
 		text-decoration: none;
 		color: #008DDA;
