@@ -270,35 +270,83 @@ header .site_title:focus {
 }
 
 header nav {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 100%;
+	margin-top: -0.5rem;
+}
+
+.menu_icon {
+	float: right;
+	display: block;
+	margin-top: 1.125rem;
+	margin-right: 1rem;
+	position: relative;
+	cursor: pointer;
+
+	transition: color .15s linear;
+	-webkit-transition: color .15s linear;
+	-moz-transition: color .15s linear;
+	-o-transition: color .15s linear;
+}
+
+.menu_icon:before {
+	content: "+";
 	float: right;
 	display: inline-block;
+	margin-left: 1rem;
+	margin-top: .33rem;
+	font-size: 2rem;
+	line-height: 0.5;
+	height: 1.2rem;
+
+	transition: transform .5s linear;
+	-webkit-transition: transform .5s linear;
+	-moz-transition: transform .5s linear;
+	-o-transition: transform .5s linear;
+}
+
+.show_menu .menu_icon { color: #008DDA; }
+
+.show_menu .menu_icon:before {
+	transform: rotate(135deg);
 }
 
 nav .nav_menu {
+	float: left;
 	position: relative;
-	padding: 0;
-	margin: .25rem 0;
+	margin: 1rem auto 0 auto;
 	list-style: none;
-	font-size: 0; /* trick to remove HTML whitespace between li elements */
-	display: block;
-	text-align: center;
+	display: none;
+	width: 100%;
+	background-color: #fff;
+	text-align: left;
+	box-shadow: 0px 5px 10px -5px rgba(0,0,0,.25);
 }
 nav .nav_menu li {
 	position: relative;
-	display: inline-block;
+	display: block;
 }
 nav .nav_menu li a {
-	display: inline-block;
-	padding: 0;
-	margin: 0 1.5rem;
+	display: block;
+	width: 100%;
+	padding: .5rem 1rem;
+	margin: 0;
 	font-size: 1rem;
 	text-decoration: none;
 	color: #008DDA;
-	text-align: center;
+	border-bottom: 1px solid #EFEFEF;
+
+	transition: color .15s linear;
+	-webkit-transition: color .15s linear;
+	-moz-transition: color .15s linear;
+	-o-transition: color .15s linear;
 }
 
 nav .nav_menu li:first-child a { margin-left: 0; }
-nav .nav_menu li:last-child a { margin-right: 0; }
+nav .nav_menu li:last-child a { border-bottom: none; }
 
 /* nav .nav_menu li.nav_menu_active a ///* remove */
 nav .nav_menu li a:hover, nav .nav_menu li a:focus {
@@ -432,6 +480,49 @@ footer .container {
 Desktop View (more than 50rem/800px)
 ========================================================================== */
 @media all and (min-width:50rem) {
+
+	header nav {
+		display: inline-block;
+		width: auto;
+		float: right;
+		position: relative;
+	}
+
+	.menu_icon { display: none; }
+
+	nav .nav_menu {
+		position: relative;
+		padding: 0;
+		margin: 1rem 0 0 0;
+		list-style: none;
+		font-size: 0; /* trick to remove HTML whitespace between li elements */
+		display: block;
+		text-align: center;
+		box-shadow: none;
+		background-color: transparent;
+	}
+	nav .nav_menu li {
+		display: inline-block;
+	}
+	nav .nav_menu li a {
+		display: inline-block;
+		padding: 0;
+		margin: 0 1.5rem;
+		font-size: 1rem;
+		text-decoration: none;
+		color: #008DDA;
+		text-align: center;
+		border-bottom: none;
+	}
+
+	nav .nav_menu li:first-child a { margin-left: 0; }
+	nav .nav_menu li:last-child a { margin-right: 0; }
+
+	/* nav .nav_menu li.nav_menu_active a ///* remove */
+	nav .nav_menu li a:hover, nav .nav_menu li a:focus {
+		color: #bdc3c7;
+	}
+
 	footer { padding: 0; }
 
 	footer .container {
