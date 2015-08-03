@@ -305,10 +305,10 @@ header nav {
 	line-height: 0.5;
 	height: 1.2rem;
 
-	transition: transform .5s linear, -webkit-transform .5s linear;
-	-webkit-transition: transform .5s linear, -webkit-transform .5s linear;
-	-moz-transition: transform .5s linear, -webkit-transform .5s linear;
-	-o-transition: transform .5s linear, -webkit-transform .5s linear;
+	transition: transform .5s linear;
+	-webkit-transition: transform .5s linear;
+	-moz-transition: transform .5s linear;
+	-o-transition: transform .5s linear;
 }
 
 .show_menu .menu_icon { color: #008DDA; }
@@ -333,6 +333,7 @@ nav .nav_menu {
 nav .nav_menu li {
 	position: relative;
 	display: block;
+	width: 100%;
 }
 nav .nav_menu li a {
 	display: block;
@@ -343,6 +344,7 @@ nav .nav_menu li a {
 	text-decoration: none;
 	color: #008DDA;
 	border-bottom: 1px solid #EFEFEF;
+	white-space: nowrap;
 
 	transition: color .15s linear;
 	-webkit-transition: color .15s linear;
