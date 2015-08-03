@@ -262,6 +262,8 @@ header .site_title {
 	text-decoration: none;
 	font-family: Georgia, sans-serif;
 	font-weight: normal;
+	position: relative;
+	z-index: 10;
 }
 
 header .site_title:hover,
@@ -276,6 +278,7 @@ header nav {
 	display: block;
 	width: 100%;
 	margin-top: -0.5rem;
+	z-index: 1;
 }
 
 .menu_icon {
@@ -286,10 +289,10 @@ header nav {
 	position: relative;
 	cursor: pointer;
 
-	transition: all .15s linear;
-	-webkit-transition: all .15s linear;
-	-moz-transition: all .15s linear;
-	-o-transition: all .15s linear;
+	transition: color .15s linear;
+	-webkit-transition: color .15s linear;
+	-moz-transition: color .15s linear;
+	-o-transition: color .15s linear;
 }
 
 .menu_icon:before {
