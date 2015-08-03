@@ -1,26 +1,13 @@
-/* ==========================================================================
-GLOBAL.JS
-Global JavaScript functions, events, and actions used throughout the website.
-========================================================================== */
-function submenu_focus() {
-	 $(".sub li a").focus(function(){
-	    $('.sub').css('left', 0)
-	});
-	 $(".sub li a").blur(function(){
-	    $('.sub').css('left', "")
-	});
-}
-
 var mobile_view = false;
 
 function default_menu() {
 	if (mobile_view === false) {
 		$('nav').removeClass('show_menu');
-		$('nav .top_menu:hidden').show();
+		$('nav .nav_menu:hidden').show();
 		$('nav .show_submenu').removeClass('show_submenu');
 		$('nav .sub:visible').hide();
 	} else {
-		$('nav .top_menu:visible').hide();
+		$('nav .nav_menu:visible').hide();
 	}
 }
 
@@ -73,23 +60,10 @@ function toggle_menu() {
 
 	if (nav.is('.show_menu')) {
 		nav.removeClass('show_menu');
-		$('.top_menu', nav).slideUp(200);
+		$('.nav_menu', nav).slideUp(200);
 	} else {
 		nav.addClass('show_menu');
-		$('.top_menu', nav).slideDown(200);
-	}
-}
-
-function toggle_submenu(el) {
-	var parent = el.parents('li');
-	var submenu = $('.sub', parent);
-
-	if (parent.is('.show_submenu')) {
-		parent.removeClass('show_submenu');
-		submenu.slideUp(200);
-	} else {
-		parent.addClass('show_submenu');
-		submenu.slideDown('200');
+		$('.nav_menu', nav).slideDown(200);
 	}
 }
 
@@ -101,14 +75,7 @@ $(document).ready(function() {
 	});
 
 	// Toggle menu capability - Hide/show main menu
-	$('.menu').click(function() {
+	$('.menu_icon').click(function() {
 		toggle_menu();
 	});
-
-	// Hide/show submenu
-	$('.submenu').click(function() {
-		toggle_submenu($(this));
-	});
-
-	submenu_focus();
 });
