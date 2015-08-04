@@ -60,10 +60,10 @@ function toggle_menu() {
 
 	if (nav.is('.show_menu')) {
 		nav.removeClass('show_menu');
-		$('.nav_menu', nav).slideUp(1000);
+		$('.nav_menu', nav).slideUp(500);
 	} else {
 		nav.addClass('show_menu');
-		$('.nav_menu', nav).slideDown(1000);
+		$('.nav_menu', nav).slideDown(500);
 	}
 }
 
