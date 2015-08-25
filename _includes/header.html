@@ -9,7 +9,7 @@
 				<li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
 				{% endif %}
 				{% endfor %}
-				<li><a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">RSS</a></li>
+				<li><a id="rss" href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">RSS</a></li>
 			</ul>
 		</nav>
 	</div>

@@ -78,4 +78,8 @@ $(document).ready(function() {
 	$('.menu_icon').click(function() {
 		toggle_menu();
 	});
+
+	$('#rss').on('click', function() {
+	  ga('send', 'event', 'nav links', 'click', 'rss');
+	});
 });
